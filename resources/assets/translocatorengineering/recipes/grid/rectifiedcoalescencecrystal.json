@@ -1,0 +1,13 @@
+{
+  "ingredientPattern": "_S_,SDS,_S_",
+  "width": 3,
+  "height": 3,
+  "ingredients": {
+    "S": {"type": "item", "code": "translocatorengineering:coalescencecrystalshard" },
+    "D": {"type": "item", "code": "translocatorengineering:coalescencecrystalshard", quantity: 2 },
+  },
+  "output": {
+    "type": "item",
+    "code": "translocatorengineering:rectifiedcoalescencecrystal"
+  }
+}

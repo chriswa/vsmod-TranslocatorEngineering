@@ -1,0 +1,25 @@
+[
+  {
+    file: "game:blocktypes/machine/statictranslocator.json",
+    op: "replace",
+    path: "/creativeinventory/general",
+    value: [ "*-normal-north" ],
+  },
+  {
+    file: "game:blocktypes/machine/statictranslocator.json",
+    op: "add",
+    path: "/maxstacksize",
+    value: 1,
+  },
+  {
+    file: "game:blocktypes/machine/statictranslocator.json",
+    op: "replace",
+    path: "/drops",
+    value: [
+      { type: "item", code: "translocatorengineering:coalescencecrystalshard", quantity: { avg: 0, var: 0 } },
+      { type: "item", code: "translocatorengineering:gatearray", quantity: { avg: 0, var: 0 } },
+      { type: "item", code: "translocatorengineering:particulationcomponent", quantity: { avg: 0, var: 0 } },
+      { type: "item", code: "translocatorengineering:powercore", quantity: { avg: 0, var: 0 } },
+    ],
+  },
+]

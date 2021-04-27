@@ -1,0 +1,6 @@
+{
+  code: "gatearray",
+  texture: { base: "item/gatearray" },
+  creativeinventory: { general: [ "*" ], items: [ "*" ], tools: [ "*" ] },
+  maxstacksize: 8,
+}

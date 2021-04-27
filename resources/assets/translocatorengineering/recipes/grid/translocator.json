@@ -1,0 +1,18 @@
+{
+  "ingredientPattern": "CAD,GPG,BS_",
+  "width": 3,
+  "height": 3,
+  "ingredients": {
+    "P": {"type": "block", "code": "game:metal-parts", quantity: 6 },
+    "G": {"type": "item", "code": "game:gear-temporal" },
+    "C": {"type": "item", "code": "translocatorengineering:rectifiedcoalescencecrystal" },
+    "A": {"type": "item", "code": "translocatorengineering:gatearray" },
+    "D": {"type": "item", "code": "translocatorengineering:particulationcomponent" },
+    "B": {"type": "item", "code": "translocatorengineering:powercore" },
+    "S": {"type": "block", "code": "game:glassslab-plain-down-free" },
+  },
+  "output": {
+    "type": "block",
+    "code": "game:statictranslocator-normal-north"
+  }
+}

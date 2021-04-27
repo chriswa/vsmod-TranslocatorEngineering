@@ -1,0 +1,16 @@
+{
+  "translocatorengineering:item-linker": "Translocator Linker",
+  "translocatorengineering:item-coalescencecrystalshard": "Coalescence Crystal Shard",
+  "translocatorengineering:item-crowbar": "Crowbar",
+  "translocatorengineering:item-gatearray": "Gate Array",
+  "translocatorengineering:item-particulationcomponent": "Particulation Component",
+  "translocatorengineering:item-powercore": "Power Core",
+  "translocatorengineering:item-rectifiedcoalescencecrystal": "Rectified Coalescence Crystal",
+  "heldhelp-linker-sync": "Synchronize",
+  "heldhelp-linker-clear": "Desynchronize",
+  "heldhelp-linker-link": "Link",
+  "translocatorengineering:ingameerror-linker-cleared": "Synchronization cleared",
+  "translocatorengineering:ingameerror-linker-out-of-range": "Out of range!",
+  "translocatorengineering:ingameerror-linker-synced": "Synchronized to Translocator",
+  "translocatorengineering:ingameerror-linker-linked": "Translocators Linked!",
+}

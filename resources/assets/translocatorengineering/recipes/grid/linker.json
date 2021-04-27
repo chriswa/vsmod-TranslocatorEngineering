@@ -1,0 +1,17 @@
+{
+  "ingredientPattern": "XDX,SLG,XAX",
+  "width": 3,
+  "height": 3,
+  "ingredients": {
+    "D": {"type": "item", "code": "game:gem-diamond-rough" },
+    "L": {"type": "block", "code": "game:glassslab-plain-down-free" },
+    "S": {"type": "item", "code": "game:metalplate-steel" },
+    "G": {"type": "item", "code": "game:metalplate-gold" },
+    "A": {"type": "item", "code": "translocatorengineering:gatearray" },
+    "X": {"type": "item", "code": "game:gear-temporal" },
+  },
+  "output": {
+    "type": "item",
+    "code": "translocatorengineering:linker"
+  }
+}

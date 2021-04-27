@@ -1,0 +1,6 @@
+{
+  code: "coalescencecrystalshard",
+  texture: { base: "item/coalescencecrystalshard" },
+  creativeinventory: { general: [ "*" ], items: [ "*" ] },
+  maxstacksize: 16,
+}

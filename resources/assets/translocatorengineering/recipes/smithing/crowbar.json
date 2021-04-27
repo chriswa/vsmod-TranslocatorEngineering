@@ -1,0 +1,16 @@
+{
+  ingredient: { type: "item", code: "game:ingot-*", name: "metal", allowedVariants: ["steel"] },
+  pattern: [[
+    "#_____________",
+    "##############",
+    "_____________#",
+    "_____________#",
+  ], [
+    "#_____________",
+    "##############",
+    "_____________#",
+    "_____________#",
+  ]],
+  name: "Crowbar",
+  output: { type: "item", code: "translocatorengineering:crowbar" },
+}

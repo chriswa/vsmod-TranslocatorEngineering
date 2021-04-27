@@ -1,0 +1,6 @@
+{
+  code: "rectifiedcoalescencecrystal",
+  texture: { base: "item/rectifiedcoalescencecrystal" },
+  creativeinventory: { general: [ "*" ], items: [ "*" ] },
+  maxstacksize: 1,
+}

@@ -1,0 +1,13 @@
+{
+  "type": "code",
+  "side": "Universal",
+  "modid": "translocatorengineering",
+  "name": "TranslocatorEngineering",
+  "authors": [
+    "goxmeor",
+    "CaptainOats"
+  ],
+  "description": "Enables deconstruction, construction, and linking of Static Translocators",
+  "version": "1.0.0",
+  "dependency": {}
+}

@@ -1,0 +1,6 @@
+{
+  code:"particulationcomponent",
+  texture: { base: "item/particulationcomponent" },
+  creativeinventory: { general: [ "*" ], items: [ "*" ] },
+  maxstacksize: 4,
+}
