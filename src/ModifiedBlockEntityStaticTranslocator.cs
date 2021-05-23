@@ -12,7 +12,7 @@ namespace TranslocatorEngineering {
   [HarmonyPatch("DoRepair")]
   public class Patch_BlockEntityStaticTranslocator_DoRepair {
     static void Prefix(BlockEntityStaticTranslocator __instance) {
-      (__instance as ModifiedBlockEntityStaticTranslocator).OnDoRepair();
+      (__instance as ModifiedBlockEntityStaticTranslocator)?.OnDoRepair();
     }
   }
   public class ModifiedBlockEntityStaticTranslocator : BlockEntityStaticTranslocator {
@@ -46,8 +46,8 @@ namespace TranslocatorEngineering {
     // called by Patch_BlockEntityStaticTranslocator_DoRepair
     public void OnDoRepair() {
       if (FullyRepaired) { return; }
+      if (RepairState == 1) { return; } // metal parts are being added
       gearsAdded += 1;
-      // Api.Logger.Notification("XXX: OnDoRepair, side = " + Api.Side);
     }
     public override void Initialize(ICoreAPI api) {
       base.Initialize(api);
@@ -90,6 +90,7 @@ namespace TranslocatorEngineering {
     }
     public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve) {
       base.FromTreeAttributes(tree, worldAccessForResolve);
+      wasPlaced = tree.GetBool("wasPlaced", false);
       var defaultGearsAdded = 0;
       if (!wasPlaced) {
         if (RepairState == 2 || RepairState == 3) { // 2: non-clockmaker has added 1 gear; 3: non-clockmaker has added 2 gears OR clockmaker has added 1
@@ -100,7 +101,6 @@ namespace TranslocatorEngineering {
         }
       }
       gearsAdded = tree.GetInt("gearsAdded", defaultGearsAdded);
-      wasPlaced = tree.GetBool("wasPlaced", false);
       lastDestinationAssignmentTimestamp = tree.GetDouble("lastDestinationAssignmentTimestamp", 0);
     }
     public override void ToTreeAttributes(ITreeAttribute tree) {
@@ -110,10 +110,11 @@ namespace TranslocatorEngineering {
       tree.SetDouble("lastDestinationAssignmentTimestamp", lastDestinationAssignmentTimestamp);
     }
     public override void OnBlockPlaced(ItemStack byItemStack = null) {
-      // Api.Logger.Notification($"XXX: ModifiedBlockEntityStaticTranslocator: OnBlockPlaced! on {Api.Side}");
+      // confusingly, OnBlockPlaced gets called with null when the Translocator is repaired with Metal Parts!
+      if (byItemStack == null) { return; } // repairing with Metal Parts is not being "placed"
       wasPlaced = true;
       FindNextChunk = false; // disable automatically searching for target
-      // when placed, translocator is fully repaired (metal parts and 2 gears, as if repaired by clockmaker)
+      // when "placed", translocator is fully repaired (metal parts and 2 gears, as if repaired by clockmaker)
       RepairState = 4;
       gearsAdded = 2;
       setupGameTickers();
